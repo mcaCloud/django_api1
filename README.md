@@ -8,3 +8,4 @@ Primeros pasos:
 7) Creamos un archivo urls.py dentro de la aplicacion
 8) migrar la base de datos: python manage.py makemigrations myApp
 9) python manage.py migrate
+10) Crear superusuario: python manage.py createsuperuser

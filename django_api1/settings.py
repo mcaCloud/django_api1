@@ -41,8 +41,12 @@ ALLOWED_HOSTS = []
 # Cada vez que creamos una nueva app en nuestro proyecto la registramos aqui
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
+
+    #--------- AUTH ---------------
+    'django.contrib.auth',  # Permite la autentificación de los usuarios
+    'django.contrib.contenttypes',# Django permite los permisos de esos usuarios
+    #--------- /AUTH ---------------
+
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -55,10 +59,13 @@ INSTALLED_APPS = [
 # > necesario para describir los controles en la aplicación
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
+
+    #--------- AUTH ---------------
+    'django.contrib.sessions.middleware.SessionMiddleware',#Gestion de sesiones
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    #--------- AUTH ---------------
+    'django.contrib.auth.middleware.AuthenticationMiddleware',#Asociar usuarios a las sesiones
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -72,7 +79,8 @@ ROOT_URLCONF = 'django_api1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # Añadimos el directorio raiz y la carpeta
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

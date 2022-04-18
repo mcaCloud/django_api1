@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %} --> se insertará en la plantilla base_generic
+{% block content %}
+<h1>Django Home</h1>
+ <p>Welcome to <em>Django application</em>, a very basic Django website
+developed.</p>
+<h2>Dynamic content</h2>
+ <p>The data has the following record counts:</p>
+ <ul>
+ <li><strong>Sepal length in cm:</strong> {{ sepal_length }}</li>
+ <li><strong>sepal width in cm:</strong> {{ sepal_width }}</li>
+ <li><strong>Petal length in cm:</strong> {{ petal_length }}</li>
+ <li><strong>Petal width in cm:</strong> {{ petal_width }}</li>
+ <li><strong>Class:</strong> {{ class }}</li>
+ </ul>
+{% endblock %}
