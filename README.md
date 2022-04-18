@@ -5,3 +5,6 @@ Primeros pasos:
 3) Cerrar el entorno virtual: deactivate
 5) Crear un archivo con los requirements: pip freeze > requirements. txt
 6) Correr la aplicación: python manage.py runserver
+7) Creamos un archivo urls.py dentro de la aplicacion
+8) migrar la base de datos: python manage.py makemigrations myApp
+9) python manage.py migrate
