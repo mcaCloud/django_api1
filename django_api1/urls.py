@@ -18,6 +18,6 @@ from django.urls import include, path
 
 # Necesito dirigir la urls del POLL aqui para manejarlo desde la aplicacion principal
 urlpatterns = [
-    path('polls/', include('polls.urls')),
+    #path('apptest/', include('apptest.urls')),
     path('admin/', admin.site.urls),
 ]
